@@ -1,0 +1,7 @@
+<div class="room_area">
+    <% @rooms.each do |room| %>
+        <div class="rooms">
+            <%= link_to room.name, room_memos_path(room), id: "room-name"%>
+        </div>
+    <% end %>
+</div>
