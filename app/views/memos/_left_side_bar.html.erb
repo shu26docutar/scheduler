@@ -26,6 +26,7 @@
 </div>
 
 <div class="rooms">
+<% if user_signed_in? %>
   <% current_user.rooms.each do |room| %>
     <div class="room">
       <div class="room-name">
@@ -33,4 +34,5 @@
       </div>
     </div>
   <% end %>
+<% end %>
 </div>

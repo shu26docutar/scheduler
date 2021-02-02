@@ -1,0 +1,9 @@
+.rooms {
+    display: flex;
+    text-align: center;
+}
+
+#room-name {
+    text-decoration: none;
+    color: #FFA500;
+}

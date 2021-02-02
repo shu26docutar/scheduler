@@ -2,5 +2,5 @@ class Memo < ApplicationRecord
     belongs_to :room
     belongs_to :user
 
-    validates :text, presence: true
+    validates :content, presence: true
 end

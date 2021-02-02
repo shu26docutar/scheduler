@@ -14,7 +14,7 @@ class MemosController < ApplicationController
         if @memo.save
           redirect_to room_memos_path(@room)
         else
-          render :index
+            render :index
         end
     end
 
