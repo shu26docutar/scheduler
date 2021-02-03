@@ -164,3 +164,7 @@ li {
     margin: 0; 
     padding: 0;
 }
+
+#room-name {
+    text-decoration: none;
+}
