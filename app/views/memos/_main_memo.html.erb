@@ -4,19 +4,10 @@
             <%= @room.name %>
         </div>
     </div>
-    <%
-=begin%>
- <div class="right-header">
-        <div class="header-button">
-            <%= link_to "チャットを終了する", root_path(@room), method: :delete %>
-        </div>
-    </div> 
-<%
-=end%>
 </div>
 
 <div id="memo">
-<%= render "memo", {memos: @memos} %>
+    <%= render "memo", {memos: @memos} %>
 </div>
 
 <div class="memo">

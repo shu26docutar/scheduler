@@ -1,38 +1,20 @@
-<%
-=begin%>
- <div class="rooms">
-    
-
-    <div class="room_area">
-    <% @rooms.each do |room| %>
-        <div class="rooms">
-            <%= link_to room.name, room_memos_path(room), id: "room-name"%>
-        </div>
-    <% end %>
-</div>
-</div>  
-<%
-=end%>
 
 <div class="side-bar-header">
-  <div class="header-name">
-    <%#= link_to current_user.name, edit_user_path(current_user) %>
+  <div class="add-btn">
+    <%= link_to new_room_path do %>
+      <span class='material-icons'>add</span>
+    <% end %>
   </div>
-    <div class="add-btn">
-        <%= link_to new_room_path do %>
-        <span class='material-icons'>add</span>
-        <% end %>
-    </div>
 </div>
 
 <div class="rooms">
-<% if user_signed_in? %>
-  <% current_user.rooms.each do |room| %>
-    <div class="room">
-      <div class="room-name">
-        <%= link_to room.name, room_memos_path(room) %>
+  <% if user_signed_in? %>
+    <% current_user.rooms.each do |room| %>
+      <div class="room">
+        <div class="room-name">
+          <%= link_to room.name, room_memos_path(room) %>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
-<% end %>
 </div>
