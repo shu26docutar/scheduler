@@ -1,0 +1,12 @@
+<div class="right_side_area">
+    <div class="contents-area">
+        <div class="calendars">
+            <%= render partial: "events/calendar_events", locals: {events: @events} %>
+            <%#= render "events/calendar_events" %>
+        </div>
+        
+    </div>
+    <div class="schedules">
+        <%= render "events/schedule" %>
+    </div>
+</div>
