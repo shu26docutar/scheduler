@@ -3,6 +3,7 @@ class MemosController < ApplicationController
     def index
         @rooms = Room.all
         @memo = Memo.all
+        @events = Event.all
         @memo = Memo.new
         @room = Room.find(params[:room_id])
         @memos = @room.memos.includes(:user)

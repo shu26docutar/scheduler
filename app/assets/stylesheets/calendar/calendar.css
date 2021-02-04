@@ -1,0 +1,11 @@
+.cale {
+    height: 100%;
+    width: 100%;
+}
+
+.days {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    /* border: 1px solid #000000; */
+}
