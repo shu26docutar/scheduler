@@ -1,0 +1,31 @@
+.show-conteiar {
+    height: 100%;
+    width: 100%;
+}
+
+.show-header {
+    height: 100px;
+    width: 100%;
+    padding-top: 30px;
+    text-align: center;
+
+}
+
+.show-header>p {
+    font-size: 50px;
+    color: #FFA500;
+    font-family: Chalkboard;
+}
+
+.show-contents {
+    padding-top: 30px;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+}
+
+.more {
+    width: calc(100vw - 50%);
+    height: calc(100vh - 50%);
+    border: 2px solid;
+}
