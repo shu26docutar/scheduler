@@ -1,10 +1,10 @@
 
 <div class="memo-contents">
   <div class="lower-memo">
-    <%= @memos.each do |memo| %>
-      <div class="boz25">
-        <%= memo.content %>
+    <% @memos.each do |memo| %>
+      <div class="box25">
+        <p><%= memo.content %></p>
       </div>
-    <% end %>
+   <% end %>
   </div>
 </div>
