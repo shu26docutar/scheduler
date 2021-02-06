@@ -1,4 +1,4 @@
-.show-conteiar {
+.show-container {
     height: 100%;
     width: 100%;
 }
@@ -27,5 +27,20 @@
 .more {
     width: calc(100vw - 50%);
     height: calc(100vh - 50%);
-    border: 2px solid;
+    border: 2px solid #AAAAAA;
+    border-radius: 10px;
+    text-align: center;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.more-lists {
+    margin: 20px;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.more-lists>p {
+    display: inline;
+    padding-right: 10px;
 }
