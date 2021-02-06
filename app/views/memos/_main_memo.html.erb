@@ -1,0 +1,18 @@
+<div class="chat-header">
+    <div class="left-header">
+        <div class="header-title">
+            <%= @room.name %>
+        </div>
+    </div>
+</div>
+
+<div id="memo">
+<div class="lower-memo">
+    <%= render "memo" %>
+</div>
+</div>
+
+<div class="memo">
+    <%= render partial: 'form', collection: {memo: @memo} %>
+</div>
+

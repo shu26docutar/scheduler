@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+  <div class="side-bar-header">
+    <div class="add-btn">
+      <%= link_to new_room_path do %>
+        <span class='material-icons'>add</span>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="rooms">
+    <% current_user.rooms.each do |room| %>
+      <div class="room">
+        <%= link_to room.name, room_memos_path(room), id: "room-name" %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

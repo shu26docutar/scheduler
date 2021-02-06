@@ -1,0 +1,9 @@
+<%= link_to new_event_path, id: "add-schedule" do %>
+    <span class='material-icons', id="new-pop">add</span>
+<% end %>
+
+<% @events.each do |event| %>
+    <%= event.title %>
+    <%#= event.first_time %>
+<% end %>
+<%# , remote: true %>

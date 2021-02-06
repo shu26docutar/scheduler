@@ -1,0 +1,13 @@
+<div class="cale">
+    <%= month_calendar do |date| %>
+    <%#= month_calendar events: @events do |date, events| %>
+    <div class="days">
+        <%= date.day %>
+    </div>
+            <%# events.each do |event| %>
+            <div>
+            <%#= event.title %>
+            </div>
+            <%# end %>
+    <% end %>
+</div>
