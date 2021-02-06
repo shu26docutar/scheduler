@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :memos, only: [:index, :create]
   end
   resources :events, only: [:index, :new, :create]
+  resources :users, only: [:show]
 end

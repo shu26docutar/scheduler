@@ -1,0 +1,21 @@
+<div class="show-conteiar">
+<div class="show-header">
+    <p><%= @nickname %>さんの詳細</p>
+</div>
+
+<div class="show-contents">
+  <div class="more">
+    <ul class="more_list">
+      <%# if user_signed_in? && current_user.id == room.user_id %>
+        <li>
+          <%#= link_to '編集', edit_tweet_path(user_id), method: :get %>
+        </li>
+        <li>
+          <%#= link_to '削除', tweet_path(user_id), method: :delete %>
+        </li>
+      <%# end %>
+    </ul>
+  </div>
+</div>
+</div>
+
