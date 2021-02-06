@@ -1,25 +1,25 @@
 <div class="form-area">
     <div class="schedule-form">
         <%= form_with model: @event, id: "js-form", local: true do |f| %>
-        <div class="schedule_title">
-            <%= f.text_field :title, style: 'border: none', class: 'form-event', id: 'form-event', placeholder: 'Title' %>
-        </div>
-
-        <div class="schedule_time">
-            <%= f.text_field :first_time, style: 'border: none', class: 'form-event', id: 'first-show', placeholder: 'times' %>
-        </div>
-
-        <div class="btn-area">
-            <div class="cancel">
-                <%= link_to :back do %>
-                    <button class="cancel-btn">戻る</button>
-                <% end %>
+            <div class="schedule_title">
+                <%= f.text_field :title, style: 'border: none', class: 'form-event', id: 'form-event', placeholder: 'Title' %>
             </div>
 
-            <div class="submit">
-                <%= f.submit '保存', class: 'form-btn' %>
+            <div class="schedule_time">
+                <%= f.text_field :first_time, style: 'border: none', class: 'form-event', id: 'first-show', placeholder: 'times' %>
             </div>
-        </div>
+
+            <div class="btn-area">
+                <div class="cancel">
+                    <%= link_to :back do %>
+                        <button class="cancel-btn">戻る</button>
+                    <% end %>
+                </div>
+
+                <div class="submit">
+                    <%= f.submit '保存', class: 'form-btn' %>
+                </div>
+            </div>
         <% end %>
     </div> 
 </div>
