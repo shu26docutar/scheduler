@@ -5,8 +5,12 @@
                 <%= f.text_field :title, style: 'border: none', class: 'form-event', id: 'form-event', placeholder: 'Title' %>
             </div>
 
+            <div class="schedule_plan">
+                <%= f.text_field :plan, style: 'border: none', class: 'form-event', id: 'form-event', placeholder: 'Plan' %>
+            </div>
+
             <div class="schedule_time">
-                <%= f.text_field :first_time, style: 'border: none', class: 'form-event', id: 'first-show', placeholder: 'times' %>
+                <%= f.datetime_select :start_time, style: 'border: none', class: 'form-event', id: 'first-show', placeholder: 'times' %>
             </div>
 
             <div class="btn-area">
