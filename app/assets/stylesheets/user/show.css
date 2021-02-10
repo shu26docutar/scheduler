@@ -25,22 +25,24 @@
 }
 
 .more {
-    width: calc(100vw - 50%);
-    height: calc(100vh - 50%);
+    width: calc(100vw - 40%);
+    height: calc(100vh - 30%);
+    margin: 20px auto;
     border: 2px solid #AAAAAA;
     border-radius: 10px;
     text-align: center;
-    /* display: flex;
-    justify-content: center; */
 }
 
 .more-lists {
     margin: 20px;
     flex-direction: column;
-    margin: 10px;
+    margin: 20px;
+    text-align: left;
+    margin-left: 15em;
 }
 
 .more-lists>p {
     display: inline;
     padding-right: 10px;
+    
 }

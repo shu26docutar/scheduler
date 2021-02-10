@@ -2,14 +2,17 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-left: 10px;
 }
 
 .room {
     margin: 10px 0;
+    width: 100%;
 }
 
 #room-name {
+    width: calc(100% - 90%);
+    padding: 10px;
     text-decoration: none;
     color: #FFA500;
-    
 }

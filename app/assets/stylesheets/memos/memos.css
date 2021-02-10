@@ -171,3 +171,22 @@ li {
     display: flex;
     justify-content: space-between;
 }
+
+.delete-btn {
+    display: none;
+    text-decoration: none;
+    color: #FFA500;
+}
+
+.delete-btn:after {
+    pointer-events: none;
+    content: " ";
+}
+
+#room-name:hover + .delete-btn {
+    opacity: 0.8;
+    display: inline-block;
+    font-size: 15px;
+    text-decoration: none;
+    color: #C0C0C0;
+}
