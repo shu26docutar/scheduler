@@ -22,7 +22,7 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 },
             format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/, message: 'は半角英数字で入力してください' }
 
-  with_options presence: true do
-    validates :nickname
-  end
+    validates :nickname, presence: true, allow_blank: true, on: :create
+
+    validates :password, presence: true, on: :create, allow_nil: true
 end
