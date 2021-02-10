@@ -1,0 +1,41 @@
+<div class="show-container">
+    <%= render "show_header" %>
+
+    <div class="show-contents"> 
+        <div class="more">
+            <%#= form_with model: current_user, url: user_path, local: true do |f|%>
+            <%= form_with model: @user, url: user_path, local: true do |f| %>
+                <div class="more-lists">
+                    <p>ニックネーム :</p>
+                    <p><%= f.text_field :nickname, class: 'form-event', autofocus: true%></p>
+                </div>
+
+                <div class="more-lists">
+                    <p>Email :</p>
+                    <p><%= f.email_field :email, class: 'form-event' %></p>
+                </div>
+
+                <div class="more-lists">
+                    <p>Passowrd(入力必須) :</p>
+                    <p><%= f.password_field :password, class: 'form-event' %></p>
+                </div>
+
+                <div class="more-lists">
+                    <p>名前 :</p>
+                    <p><%= f.text_field :first_name, class: 'form-event' %> <%= f.text_field :last_name, class: 'form-event' %></p>
+                </div>
+
+                <div class="more-lists">
+                    <p>フリガナ :</p>
+                    <p><%= f.text_field :first_name_kana, class: 'form-event' %> <%= f.text_field :last_name_kana, class: 'form-event' %></p>  
+                </div>
+
+                <%= link_to root_path do %>
+                    <button class="cancel-btn">戻る</button>
+                <% end %>
+
+                <%= f.submit "Update", class: 'cancel-btn'%>
+            <% end %>
+        </div>  
+    </div>
+</div>      
