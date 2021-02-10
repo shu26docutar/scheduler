@@ -1,13 +1,15 @@
+
 <div class="cale">
-    <%= month_calendar do |date| %>
-    <%#= month_calendar events: @events do |date, events| %>
-    <div class="days">
-        <%= date.day %>
-    </div>
-            <%# events.each do |event| %>
-            <div>
-            <%#= event.title %>
-            </div>
-            <%# end %>
+    <h1>Schedule</h1>
+
+    <%= month_calendar events: @events do |date, events| %>
+        <div class="days">
+            <%= date.day %>
+        </div>
+
+　　     <% events.each do |event| %><br />
+　　　      <%= event.start_time.strftime('%H:%M') %>
+　　　      <%= link_to event.title, event_path(event) %>
+　　     <% end %>
     <% end %>
 </div>

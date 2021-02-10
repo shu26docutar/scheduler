@@ -1,6 +1,9 @@
+
+<div class="main-memo">
 <%= form_with model: [@room, @memo], class: 'form', local: true do |f| %>
   <div class="form-input">
     <%= f.text_field :content, class: 'form-memo', placeholder: 'type a memo' %>
   </div>
     <%= f.submit '送信', class: 'form-submit' %>
 <% end %>
+</div>
