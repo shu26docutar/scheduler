@@ -15,10 +15,15 @@ class EventsController < ApplicationController
       render :new
     end
   end
+
+  def show
+    event = Event.find(params[:id])
+  end
+  
   
   
   private
   def event_params
-    params.require(:event).permit(:title, :first_time).merge(user_id: current_user.id)
+    params.require(:event).permit(:title, :start_time, :plan).merge(user_id: current_user.id)
   end
 end
