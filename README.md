@@ -22,6 +22,8 @@
 ・メモ機能
 ・スケジュール機能
 
+## 目的
+
 # 実装した機能についてのGIFと説明
 
 # 実装予定の機能
@@ -45,10 +47,10 @@
 | birthday             | date    |                                      |
 
 ### Associateion
-has_many: room_users
-has_many: rooms,through: :room_users
-has_many: memos
-has_many: events
+- has_many: room_users
+- has_many: rooms,through: :room_users
+- has_many: memos
+- has_many: events
 
 
 ### Room
@@ -57,9 +59,9 @@ has_many: events
 | name            | string    | null: false                  |
 
 ### Associateion
-has_many: room_users
-has_many: users,through: :room_users
-has_many: events
+- has_many: room_users
+- has_many: users,through: :room_users
+- has_many: events
 
 
 ### Room_User
@@ -69,8 +71,8 @@ has_many: events
 | user   | reference | null: false,foreign_key: true |
 
 ### Associateion
-belongs_to: room
-belongs_to: user
+- belongs_to: room
+- belongs_to: user
 
 
 ### Memo
@@ -81,8 +83,8 @@ belongs_to: user
 | user            | reference | null: false,foreign_key: true |
 
 ### Associateion
-belongs_to: room
-belongs_to: user
+- belongs_to: room
+- belongs_to: user
 
 
 ### Event
@@ -93,4 +95,4 @@ belongs_to: user
 | date_time       | datetime  | null: false       |
 
 ### Associateion
-belongs_to: user
+- belongs_to: user
