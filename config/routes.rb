@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :rooms, only: [:new, :create, :destroy] do
     resources :memos, only: [:index, :create]
   end
-  resources :events, only: [:index, :new, :create, :show]
+  resources :events
 end
