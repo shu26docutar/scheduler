@@ -5,9 +5,9 @@
     <%= month_calendar events: @events do |date, events| %>
         <div class="days">
             <%= date.day %>
-            <% @events.each do |event| %>
-                <% link_to event.title, event_path(event) %>
-                <%#= event.start_time %>
+            <% events.each do |event| %>
+                <%= event.start_time.strftime('%H:%M') %>
+                <%= link_to event.title, event_path(event) %>
             <% end %>
         </div>
     <% end %>

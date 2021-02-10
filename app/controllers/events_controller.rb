@@ -11,7 +11,8 @@ class EventsController < ApplicationController
 
   def create
     if @event = Event.create(event_params)
-      redirect_to template: "memos/index.html.erb"
+      redirect_to root_path
+      # redirect_to template: "memos/index.html.erb"
     else
       render :new
     end
