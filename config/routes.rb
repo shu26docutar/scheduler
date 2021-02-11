@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: "rooms#index"
   resources :users, only: [:show, :edit, :update]
   resources :rooms, only: [:new, :create, :destroy] do
-    resources :memos, only: [:index, :create]
+    resources :memos, except: :new
   end
   resources :events
 end
