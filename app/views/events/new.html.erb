@@ -1,16 +1,43 @@
 <div class="form-area">
     <div class="schedule-form">
         <%= form_with model: @event, id: "js-form", local: true do |f| %>
+
             <div class="schedule_title">
-                <%= f.text_field :title, style: 'border: none', class: 'form-event', id: 'form-event', placeholder: 'Title' %>
+                <%= f.text_field :title, class: 'form-event', id: 'form-event', placeholder: 'Title' %>
             </div>
 
             <div class="schedule_plan">
-                <%= f.text_field :plan, style: 'border: none', class: 'form-event', id: 'form-event', placeholder: 'Plan' %>
+                <%= f.text_field :plan, class: 'form-event', id: 'form-event', placeholder: 'Plan' %>
+            </div>
+
+            <div class="schedule_plan">
+                <%= f.text_field :comments, class: 'form-event-jquery', id: 'form-event-comment', placeholder: 'Comment' %>
+            </div>
+
+            <div class="schedule_plan">
+                <%= f.text_field :place, class: 'form-event-jquery', id: 'form-event-place', placeholder: 'Place' %>
+            </div>
+
+            <div class="schedule_plan">
+                <%= f.text_field :url, class: 'form-event-jquery', id: 'form-event-url', placeholder: 'Url' %>
             </div>
 
             <div class="schedule_time">
-                <%= f.datetime_select :start_time, style: 'border: none', class: 'form-event', id: 'first-show', placeholder: 'times' %>
+                <%= f.datetime_select :start_time, class: 'form-event', id: 'first-show', placeholder: 'times' %>
+            </div>
+
+            <div class="select-area">
+                <div class="select-btn">
+                    <p class="btn-comment">Comments</p>
+                </div>
+
+                <div class="select-btn">
+                    <p class="btn-place">Place</p>
+                </div>
+
+                <div class="select-btn">
+                    <p class="btn-url">URL</p>
+                </div>
             </div>
 
             <div class="btn-area">
