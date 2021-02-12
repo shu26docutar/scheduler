@@ -7,13 +7,28 @@
             </div>
 
             <div class="show-content">
+                <h1>Schedule Time :</h1>
+                <%= @event.start_time.strftime('%H:%M') %>
+            </div>
+
+            <div class="show-content">
                 <h1>Plan :</h1>
                 <%= @event.plan %>
             </div>
 
             <div class="show-content">
-                <h1>Schedule Time :</h1>
-                <%= @event.start_time.strftime('%H:%M') %>
+                <h1>Comment :</h1>
+                <%= @event.comment %>
+            </div>
+
+            <div class="show-content">
+                <h1>Place :</h1>
+                <%= @event.place %>
+            </div>
+
+            <div class="show-content">
+                <h1>Url :</h1>
+                <%= @event.url %>
             </div>
 
             <div class="show-btn">
