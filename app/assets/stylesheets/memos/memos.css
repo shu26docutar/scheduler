@@ -66,7 +66,7 @@ li {
     text-decoration: none;
 }
 
-.logo, .greet {
+.logo, .greet, #link-content {
     color: #FFA500;
 }
 
@@ -74,16 +74,16 @@ li {
     margin-right: 20px;
     font-size: 40px;
     text-decoration: none;
-    color: #FFA500;
 }
 
 .wrapper {
     display: flex;
     justify-content: space-between;
+    height: calc(100vh - 100px);
 }
 
-.left-side, .main_memo, .right-side {
-    height: calc(100vh - 60px);
+.left-side, .right-side {
+    height: calc(100vh - 100px);
 }
 
 .left-side {
@@ -91,11 +91,13 @@ li {
 }
 
 .main-memo {
+    position: fixed;
+    left: 200px;
     width: calc(100vw - 650px);
 }
 
 .memo-area {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 200px);
 }
 
 .form-space {
