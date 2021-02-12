@@ -1,9 +1,10 @@
 <div class="show-container">
-    <%= render "show_header" %>
+    <div class="show-header">
+        <p><%= @user.nickname %>さんの詳細</p>
+    </div>
 
     <div class="show-contents"> 
         <div class="more">
-            <%#= form_with model: current_user, url: user_path, local: true do |f|%>
             <%= form_with model: @user, url: user_path, local: true do |f| %>
                 <div class="more-lists">
                     <p>ニックネーム :</p>
@@ -34,7 +35,7 @@
                     <button class="cancel-btn">戻る</button>
                 <% end %>
 
-                <%= f.submit "Update", class: 'cancel-btn'%>
+                <%= f.submit "更新", class: 'cancel-btn'%>
             <% end %>
         </div>  
     </div>

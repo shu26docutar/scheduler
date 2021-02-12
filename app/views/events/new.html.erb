@@ -3,19 +3,19 @@
         <%= form_with model: @event, id: "js-form", local: true do |f| %>
 
             <div class="schedule_title">
-                <%= f.text_field :title, class: 'form-event', id: 'form-event', placeholder: 'Title' %>
+                <%= f.text_field :title, class: 'form-event', id: 'form-event', placeholder: 'タイトル' %>
             </div>
 
             <div class="schedule_plan">
-                <%= f.text_field :plan, class: 'form-event', id: 'form-event', placeholder: 'Plan' %>
+                <%= f.text_field :plan, class: 'form-event', id: 'form-event', placeholder: '内容' %>
             </div>
 
             <div class="schedule_plan">
-                <%= f.text_field :comment, class: 'form-event-jquery', id: 'form-event-comment', placeholder: 'Comment' %>
+                <%= f.text_field :comment, class: 'form-event-jquery', id: 'form-event-comment', placeholder: 'コメント' %>
             </div>
 
             <div class="schedule_plan">
-                <%= f.text_field :place, class: 'form-event-jquery', id: 'form-event-place', placeholder: 'Place' %>
+                <%= f.text_field :place, class: 'form-event-jquery', id: 'form-event-place', placeholder: '場所' %>
             </div>
 
             <div class="schedule_plan">
@@ -28,11 +28,11 @@
 
             <div class="select-area">
                 <div class="select-btn">
-                    <p class="btn-comment">Comments</p>
+                    <p class="btn-comment">コメント</p>
                 </div>
 
                 <div class="select-btn">
-                    <p class="btn-place">Place</p>
+                    <p class="btn-place">場所</p>
                 </div>
 
                 <div class="select-btn">
@@ -43,12 +43,12 @@
             <div class="btn-area">
                 <div class="cancel">
                     <%= link_to :back do %>
-                        <button class="cancel-btn">Back</button>
+                        <button class="cancel-btn">戻る</button>
                     <% end %>
                 </div>
 
                 <div class="submit">
-                    <%= f.submit 'Save', class: 'form-btn' %>
+                    <%= f.submit '保存', class: 'form-btn' %>
                 </div>
             </div>
         <% end %>

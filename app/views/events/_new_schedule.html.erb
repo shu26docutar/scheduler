@@ -1,20 +1,20 @@
 <div id="schedule-modal">
-<%= form_with(model: @event, id: "schedule-modal", local: true) do |f| %>
+    <%= form_with(model: @event, id: "schedule-modal", local: true) do |f| %>
 
-    <div class="schedule_title">
-        <%= f.text_field :title, class: 'form-event', id: 'form-event', placeholder: 'Title' %>
-    </div>
+        <div class="schedule_title">
+            <%= f.text_field :title, class: 'form-event', id: 'form-event', placeholder: 'Title' %>
+        </div>
 
-    <div class="schedule_plan">
-        <%= f.text_field :plan, class: 'form-plan', id: 'form-plan', placeholder: 'Plan' %>
-    </div>
+        <div class="schedule_plan">
+            <%= f.text_field :plan, class: 'form-plan', id: 'form-plan', placeholder: 'Plan' %>
+        </div>
 
-    <div class="schedule_time">
-        <%= f.datetime_select :start_time, class: 'form_time', id: 'first-show', placeholder: 'times' %>
-    </div>
+        <div class="schedule_time">
+            <%= f.datetime_select :start_time, class: 'form_time', id: 'first-show', placeholder: 'times' %>
+        </div>
 
-    <div class="submit">
-        <%= f.submit '保存'%>
-    </div>
-<% end %> 
+        <div class="submit">
+            <%= f.submit '保存'%>
+        </div>
+    <% end %> 
 </div>
