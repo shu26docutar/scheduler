@@ -1,0 +1,15 @@
+
+
+<div class="test-btn">
+    <p class='material-icons test-icon'>add</p>
+</div>
+
+<div class="test-memo">
+    <div class="box25">
+    <%= form_with model: [@room, @memo], local: true do |f| %>
+    <%= f.text_area :content %>
+    <%= f.submit '保存', class: 'form-submit' %>
+    <button class="form-submit">キャンセル</button>
+    <% end %>
+    </div>
+</div>

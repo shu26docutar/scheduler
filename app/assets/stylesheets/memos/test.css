@@ -1,0 +1,7 @@
+.test-memo {
+    display: none;
+}
+
+.test-icon:hover {
+    cursor: pointer;
+}

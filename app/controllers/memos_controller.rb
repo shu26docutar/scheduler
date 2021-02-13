@@ -17,6 +17,19 @@ class MemosController < ApplicationController
         end
     end
 
+    def edit
+        @room = Room.find(params[:room_id])
+        @memos = @room.memos.includes(:user)
+    end
+    
+    
+    def update
+        @room = Room.find(params[:room_id])
+        @memos = @room.memos.includes(:user)
+        @memos.update!(memo_params)
+        redirect_to request.referer(memo_params)
+    end
+    
     private 
     def memo_params
         params.require(:memo).permit(:content).merge(user_id: current_user.id)
