@@ -12,23 +12,31 @@
             </div>
 
             <div class="show-content">
-                <h1>Plan :</h1>
-                <%= @event.plan %>
+                <% if @event.plan.present? %>
+                    <h1>Plan :</h1>
+                    <%= @event.plan %>
+                <%end%>
             </div>
 
             <div class="show-content">
-                <h1>Comment :</h1>
-                <%= @event.comment %>
+                <% if @event.comment.present? %>
+                    <h1>Comment :</h1>
+                    <%= @event.comment %>
+                <% end %>
             </div>
 
             <div class="show-content">
-                <h1>Place :</h1>
-                <%= @event.place %>
+                <% if @event.place.present? %>
+                    <h1>Place :</h1>
+                    <%= @event.place %>
+                <% end %>
             </div>
 
             <div class="show-content">
-                <h1>Url :</h1>
-                <%= @event.url %>
+                <% if @event.url.present? %>
+                    <h1>Url :</h1>
+                    <%= @event.url %>
+                <% end %>
             </div>
 
             <div class="show-btn">
