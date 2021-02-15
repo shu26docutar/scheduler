@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :ser_event, onlu: [:show, :destroy]
+  before_action :set_event, only: [:show, :destroy]
   def index
     @events = Event.all
     events = Event.all
@@ -34,7 +34,7 @@ class EventsController < ApplicationController
     params.require(:event).permit(:title, :start_time, :plan, :comment, :place, :url).merge(user_id: current_user.id)
   end
 
-  def ser_event
+  def set_event
     @event = Event.find(params[:id])
   end
 end
