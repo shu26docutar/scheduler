@@ -93,7 +93,7 @@ li {
 .main-memo {
     position: fixed;
     left: 200px;
-    width: calc(100vw - 650px);
+    width: calc(100vw - 800px);
 }
 
 .memo-area {
@@ -135,20 +135,16 @@ li {
 }
 
 .right-side {
-    width: 450px;
+    width: 600px;
 }
 
 .calendar {
-    height: 50%;
-    width: 100%;
-}
-
-.schedule {
-    height: 50%;
+    height: 100%;
     width: 100%;
 }
 
 .box25{
+    width: 500px;
     margin: 20px;
     position: relative;
     background: #fff0cd;
