@@ -6,6 +6,15 @@
 
         <div class="icon-area">
             <div class="icon-btn">
+                <% if @room.present? %>
+                    <%= link_to room_path(@room), method: :delete,
+                        data: { confirm: "#{@room.name}削除しますか？この作業は取り戻せません。" } do%>
+                        <button class='material-icons'><abbr title="ルームの削除">delete</abbr></button>
+                    <% end %>
+                <% end %>
+            </div>
+
+            <div class="icon-btn">
                 <%= link_to new_room_path do %>
                     <button class='material-icons search-btn'><abbr title="ルームの作成">house</abbr></button>
                 <% end %>
@@ -20,7 +29,6 @@
             <div class="icon-btn">
                 <button class="material-icons", id="face-btn">face</button>
             </div>
-
             
             <div class="navbar", id="navbar">
                 <ul class="nav-lists">

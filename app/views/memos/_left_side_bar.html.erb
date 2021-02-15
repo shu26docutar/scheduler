@@ -9,9 +9,6 @@
     <% current_user.rooms.each do |room| %>
       <div class="room">
         <%= link_to room.name, room_memos_path(room), id: "room-name" %>
-          <% unless @room == nil  %>
-            <%= link_to '削除', room_path(@room), method: :delete, class: "delete-btn", data: { confirm: '削除しますか？' } %>
-          <% end %>
       </div>
     <% end %>
   </div>
