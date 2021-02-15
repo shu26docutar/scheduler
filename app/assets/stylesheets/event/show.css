@@ -16,6 +16,10 @@
     overflow: scroll;
 }
 
+.show-container::-webkit-scrollbar {
+    display:none;
+}
+
 .show-area {
     margin: 40px;
     font-size: 40px;
