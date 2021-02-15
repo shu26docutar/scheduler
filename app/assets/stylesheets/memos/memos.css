@@ -61,7 +61,14 @@ abbr[title], acronym[title] {
     opacity: 1;
 }
 
+.nav-lists {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
 .nav-lists>li {
+    align-items: center;
     font-size: 25px;
     margin-bottom: 10px;
 }
@@ -143,7 +150,7 @@ abbr[title], acronym[title] {
 }
 
 .right-side {
-    padding-top: 100px;
+    padding-top: 30px;
     width: 600px;
 }
 
@@ -182,23 +189,4 @@ abbr[title], acronym[title] {
 .room {
     display: flex;
     justify-content: space-between;
-}
-
-.delete-btn {
-    display: none;
-    text-decoration: none;
-    color: #FFA500;
-}
-
-.delete-btn:after {
-    pointer-events: none;
-    content: " ";
-}
-
-#room-name:hover + .delete-btn {
-    opacity: 0.8;
-    display: inline-block;
-    font-size: 15px;
-    text-decoration: none;
-    color: #C0C0C0;
 }
