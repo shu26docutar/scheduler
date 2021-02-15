@@ -6,11 +6,13 @@
             <%= month_calendar events: @events do |date, events| %>
                 <div class="days">
                     <%= date.day %>
-                    <% events.each do |event| %>
-                        <%= event.start_time.strftime('%H:%M') %>
-                        <%= link_to event.title, event_path(event) %>
-                    <% end %>
-                </div> 
+                        <% events.each do |event| %>
+                            <% if current_user.id == event.user_id %>
+                                <%= event.start_time.strftime('%H:%M') %>
+                                <%= link_to event.title, event_path(event) %>
+                            <% end %>
+                        <% end %> 
+                </div>   
             <% end %>
         <%end%>
     </div>
