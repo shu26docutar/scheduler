@@ -1,43 +1,40 @@
 class EventsController < ApplicationController
+  before_action :ser_event, onlu: [:show, :destroy]
   def index
     @events = Event.all
     events = Event.all
   end
 
   def new
-    # @event = Event.find(params[:id])
     @event = Event.new
   end
 
   def create
     if @event = Event.create(event_params)
       redirect_to root_path
-      # redirect_to template: "memos/index.html.erb"
     else
       render :new
     end
   end
 
   def show
-    @event = Event.find(params[:id])
   end
 
   def update
-    
   end
   
 
   def destroy
-      @event = Event.find(params[:id])
       @event.destroy
       redirect_to root_path
   end
-  
-  
-  
-  
+
   private
   def event_params
     params.require(:event).permit(:title, :start_time, :plan, :comment, :place, :url).merge(user_id: current_user.id)
+  end
+
+  def ser_event
+    @event = Event.find(params[:id])
   end
 end
