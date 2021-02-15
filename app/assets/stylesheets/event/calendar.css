@@ -4,8 +4,19 @@
 }
 
 .days {
-    width: 100%;
+    width: 60px;
+    height: 100px;
     padding: 5px;
     text-align: center;
-    /* border: 1px solid #000000; */
+    overflow: scroll;
+}
+
+.schedule-content {
+    font-size: 13px;
+}
+
+
+
+::-webkit-scrollbar {
+    display:none;
 }
