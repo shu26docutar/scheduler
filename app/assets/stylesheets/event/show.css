@@ -10,9 +10,10 @@
 .show-container {
     border: 2px solid#FFA500;
     border-radius: 10px;
-    height: calc(100vh - 50%);
+    height: 100%;
     width: calc(100vw - 60%);
     background-color: #FFFAF0;
+    overflow: scroll;
 }
 
 .show-area {
