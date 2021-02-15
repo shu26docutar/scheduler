@@ -39,14 +39,14 @@ PCを外に持ち歩いたり、元から荷物が多い方、デスクワーク
 - メモのルーム機能
 ルーム機能を紹介します。＋ボタンを押すことでルームの作成画面に遷移します。
 ルームを作成すると、左側に作成されます。作成されると、削除することもできます。
-[![Image from Gyazo](https://i.gyazo.com/72da9669697c65f747240dcd420caaf2.gif)](https://gyazo.com/72da9669697c65f747240dcd420caaf2)
+[![Image from Gyazo](https://i.gyazo.com/3856fd75c497ed0350ae954ee02c90b1.gif)](https://gyazo.com/3856fd75c497ed0350ae954ee02c90b1)
 
 - メモ機能
 メモ機能を紹介します。
 入力欄に入力し、保存ボタンを押すとメモを保存することができます。保存したメモを各ルーム毎にメモをそれぞれ分けることができます。
 そのためルームを活用して、ジャンル毎に分けることができるためメモの管理がしやすくなります。
 ルームを削除することでメモも共に削除されます。
-[![Image from Gyazo](https://i.gyazo.com/e4a0239273f66f7fc5720b361d63a974.gif)](https://gyazo.com/e4a0239273f66f7fc5720b361d63a974)
+[![Image from Gyazo](https://i.gyazo.com/e11b9228d5b5427727614420f069f12c.gif)](https://gyazo.com/e11b9228d5b5427727614420f069f12c)
 
 - カレンダー機能
 カレンダー機能を紹介します。
