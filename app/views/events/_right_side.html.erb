@@ -1,11 +1,5 @@
 <div class="right_side_area">
-    <div class="contents-area">
-        <div class="schedules">
-            <%= link_to new_event_path, id: "add-schedule" do %>
-                <span class='material-icons', id="new-pop">add</span>
-            <% end %>
-        </div>
-        
+    <div class="contents-area">        
         <div class="calendars">
             <%= render "events/calendar_events" %>
         </div>

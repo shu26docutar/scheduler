@@ -1,18 +1,40 @@
-<div class="header">
-    <div class="logo">
-        MemoSuke
-    </div>
+<div class="header-content">
+    <div class="header">
+        <div class="logo">
+            MemoSuke
+        </div>
 
-    <div class="header-links">
-        <ul class='user-lists'>
-            <%if user_signed_in? %>
-                <li >hello. <%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname", id: "link-content"  %></li>
-                <li ><%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "logout", id: "link-content"  %></li> 
-            <% else %>
-                <li ><%= link_to 'Log In', new_user_session_path, class: "login", id: "link-content" %></li>
-                <li ><%= link_to 'Sign In', new_user_registration_path, class: "sign-up", id: "link-content" %></li>
-            <% end %>
-        </ul>
+        <div class="icon-area">
+            <div class="icon-btn">
+                <%= link_to new_room_path do %>
+                    <button class='material-icons search-btn'><abbr title="ルームの作成">house</abbr></button>
+                <% end %>
+            </div>
+
+            <div class="icon-btn">
+                <%= link_to new_event_path, id: "add-schedule" do %>
+                    <button class='material-icons', id="new-pop"><abbr title="スケジュールの追加">add</abbr></button>
+                <% end %>
+            </div>
+
+            <div class="icon-btn">
+                <button class="material-icons", id="face-btn">face</button>
+            </div>
+
+            
+            <div class="navbar", id="navbar">
+                <ul class="nav-lists">
+                    <% if  user_signed_in? %>
+                        <li><%= current_user.nickname %></li>
+                        <li><%= link_to '詳細', user_path(current_user.id) %></li>
+                        <li><%= link_to '編集', edit_user_path(current_user.id) %></li>
+                        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+                    <% else %>
+                        <li><%= link_to 'ログイン', new_user_session_path %></li>
+                        <li><%= link_to 'サインイン', new_user_registration_path %></li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
-
