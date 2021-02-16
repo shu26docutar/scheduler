@@ -4,4 +4,13 @@
     height: 100%;
     width: 650px;
     margin-bottom: 50px;
+    overflow: scroll;
+}
+.containers::-webkit-scrollbar {
+    display:none;
+}
+
+.title-path {
+    text-decoration: none;
+    color: #FFA500;
 }
