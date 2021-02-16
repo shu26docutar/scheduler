@@ -1,11 +1,7 @@
-<div class="contents-name">
-  <%= link_to "Home", root_path, class: "link-content" %>
-</div>
-
 <div class="contents">
   <div class="top-content">
     <div class="title">
-      MemoSuke
+      <%= link_to "Memosuke", root_path, class: "title-path" %>
     </div>
   </div>
 
@@ -36,6 +32,7 @@
       <div class="login-btn">
         <%= f.submit "Log in", class: "login-push-btn" %>
       </div>
+      <%= render "devise/shared/links" %>
     <% end %>
   </div>
 </div>

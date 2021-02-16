@@ -33,7 +33,7 @@
             <div class="navbar", id="navbar">
                 <ul class="nav-lists">
                     <% if  user_signed_in? %>
-                        <li><%= current_user.nickname %></li>
+                        <li><%= current_user.name %></li>
                         <li><%= link_to '詳細', user_path(current_user.id) %></li>
                         <li><%= link_to '編集', edit_user_path(current_user.id) %></li>
                         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>

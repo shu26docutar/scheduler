@@ -1,11 +1,7 @@
-<div class="contents-name">
-  <%= link_to "Home", root_path, class: "link-content" %>
-</div>
-
 <div class="contents">
   <div class="top-content">
     <div class="title">
-      MemoSuke
+      <%= link_to 'MemoSuke', root_path, class: "title-path" %>
     </div>
   </div>
 
@@ -37,28 +33,15 @@
       </div>
 
       <div class="field">
-        <%= f.label :first_name %><em>：漢字入力</em><br />
-        <%= f.text_field :first_name %>
-      </div>
-
-      <div class="field">
-        <%= f.label :last_name %><em>：漢字入力</em><br />
-        <%= f.text_field :last_name %>
-      </div>
-
-      <div class="field">
-        <%= f.label :first_name_kana %><em>：カタカナ入力</em><br />
-        <%= f.text_field :first_name_kana %>
-      </div>
-
-      <div class="field">
-        <%= f.label :last_name_kana %><em>：カタカナ入力</em><br />
-        <%= f.text_field :last_name_kana %>
+        <%= f.label :name_kana %><em>：カタカナ入力(フル)</em><br />
+        <%= f.text_field :name_kana %>
       </div>
 
       <div class="actions">
         <%= f.submit "Sign up" %>
       </div>
+
+      <%= render "devise/shared/links" %>
     <% end %>
   </div>
 </div>
