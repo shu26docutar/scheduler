@@ -15,15 +15,4 @@ class User < ApplicationRecord
   has_many :rooms, through: :room_users
   has_many :memos
   has_many :events
-
-
-  # with_options presence: true, format: { with: /\A[ァ-ヶ一-]+\z/, message: '全角カナを使用してください' } do
-  #   validates :first_name_kana
-  #   validates :last_name_kana
-  # end
-
-  validates :password, presence: true, length: { minimum: 6 },
-            format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/, message: 'は半角英数字で入力してください' }
-
-  #   validates :password, presence: true, on: :create, allow_nil: true
 end
