@@ -59,3 +59,11 @@ gem 'devise'
 gem 'pry-rails'
 
 gem 'rails-i18n'
+
+gem 'dotenv-rails'
+
+gem 'omniauth-google-oauth2'
+
+gem 'omniauth', '1.9.1'
+
+gem 'omniauth-twitter'
