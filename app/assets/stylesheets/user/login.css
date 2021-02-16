@@ -4,17 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.contents, .link-content {
-    font-family: Chalkboard;
-    color: #FFA500;
-    font-size: 30px;
-}
-
-.link-content {
-    text-decoration: none;
-    padding-left: 30px;
+    height: 100vh;
 }
 
 .title {
