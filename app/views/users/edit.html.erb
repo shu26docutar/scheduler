@@ -1,14 +1,14 @@
 <div class="show-container">
     <div class="show-header">
-        <p><%= @user.nickname %>さんの詳細</p>
+        <p><%= @user.name %>さんの詳細</p>
     </div>
 
     <div class="show-contents"> 
         <div class="more">
             <%= form_with model: @user, url: user_path, local: true do |f| %>
                 <div class="more-lists">
-                    <p>ニックネーム :</p>
-                    <p><%= f.text_field :nickname, class: 'form-event', autofocus: true%></p>
+                    <p>名前 :</p>
+                    <p><%= f.text_field :name, class: 'form-event', autofocus: true%></p>
                 </div>
 
                 <div class="more-lists">
@@ -22,13 +22,8 @@
                 </div>
 
                 <div class="more-lists">
-                    <p>名前 :</p>
-                    <p><%= f.text_field :first_name, class: 'form-event' %> <%= f.text_field :last_name, class: 'form-event' %></p>
-                </div>
-
-                <div class="more-lists">
                     <p>フリガナ :</p>
-                    <p><%= f.text_field :first_name_kana, class: 'form-event' %> <%= f.text_field :last_name_kana, class: 'form-event' %></p>  
+                    <p><%= f.text_field :name_kana, class: 'form-event' %> <%= f.text_field :last_name, class: 'form-event' %></p>
                 </div>
 
                 <%= link_to root_path do %>

@@ -1,28 +1,23 @@
 <div class="show-container">
     <div class="show-header">
-        <p><%= @user.nickname %>さんの詳細</p>
+        <p><%= @user.name %>さんの詳細</p>
     </div>
 
     <div class="show-contents">
         <div class="more">
             <div class="more-lists">
-                <p>ニックネーム :</p>
-                <p><%= @user.nickname %></p>
+                <p>名前 :</p>
+                <p><%= @user.name %></p>
+            </div>
+
+            <div class="more-lists">
+                <p>フリガナ :</p>
+                <p><%= @user.name_kana %></p>
             </div>
 
             <div class="more-lists">
                 <p>Email :</p>
                 <p><%= @user.email %></p>
-            </div>
-
-             <div class="more-lists">
-                <p>名前 :</p>
-                <p><%= @user.first_name%> <%= @user.last_name %></p>
-            </div>
-
-            <div class="more-lists">
-                <p>フリガナ :</p>
-                <p><%= @user.first_name_kana %> <%= @user.last_name_kana %></p>  
             </div>
 
             <%= link_to root_path do %>
