@@ -53,6 +53,7 @@
 
 .back-btn-area {
     padding-top: 7px;
+    margin-bottom: 10px;
     height: 45px;
     width: 200px;
     border: 1px solid #AAAAAA;
@@ -65,21 +66,18 @@
     background-color: #AAAAAA;
 }
 
+.link-style {
+    text-decoration: none;
+}
+
 .user-form-confirm {
     width: 70px;
     height: 50px;
     padding-left: 10rem;
-    /* text-align: center; */
 }
 
 .link-btn {
     margin: 10px;
     width: 50px;
+    
 }
-
-
-
-.user-form-confirms {
-
-}
-

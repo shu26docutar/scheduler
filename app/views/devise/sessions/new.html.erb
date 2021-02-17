@@ -1,38 +1,47 @@
-<div class="contents">
+<div class="sign-in-contents">
   <div class="top-content">
     <div class="title">
       <%= link_to "Memosuke", root_path, class: "title-path" %>
     </div>
   </div>
+  
 
-  <div class="container">
-    <div class='login-flash-message'>
-      <%= flash[:notice] %>
-      <%= flash[:alert] %>
-    </div>
-    
-    <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, class: "email-field", placeholder:"", autofocus: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
-
-      <% if devise_mapping.rememberable? %>
-        <div class="field">
-          <%= f.label :remember_me %><br />
-          <%= f.check_box :remember_me %>
+  <div class="containers">
+    <div class="row-content">
+      <div class="left-form-area">
+        <div class="user-form-confirm">
+          <%= render "devise/shared/links" %>
         </div>
-      <% end -%>
-
-      <div class="login-btn">
-        <%= f.submit "ログイン", class: "login-push-btn" %>
       </div>
-      <%= render "devise/shared/links" %>
+
+      <div class="right-form-area">
+        <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+          <div class='login-flash-message'>
+            <%= flash[:notice] %>
+            <%= flash[:alert] %>
+          </div>
+
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, class: "email-field", placeholder:"", autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+
+          <% if devise_mapping.rememberable? %>
+          <div class="field">
+            <%= f.label :remember_me %><br />
+            <%= f.check_box :remember_me %>
+          </div>
+          <% end -%>
+
+        <div class="actions">
+          <%= f.submit "ログイン", class: "login-push-btn" %>
+        </div>
     <% end %>
+    </div>
   </div>
 </div>
