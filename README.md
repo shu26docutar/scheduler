@@ -107,6 +107,7 @@ PCを外に持ち歩いたり、元から荷物が多い方、デスクワーク
 - has_many: rooms,through: :room_users
 - has_many: memos
 - has_many: events
+- has_many: sns_credential
 
 
 ### Room
@@ -154,4 +155,15 @@ PCを外に持ち歩いたり、元から荷物が多い方、デスクワーク
 | date_time       | datetime  | null: false       |
 
 ### Associateion
+- belongs_to: user
+
+
+### Sns_Credential
+|     Column      |   Type    |      Options      |
+| --------------- | --------- | ----------------- |
+| provider        | string    |                   |
+| uid             | string    |                   |
+| user            | reference | foreign_key: true |
+
+### Association
 - belongs_to: user
