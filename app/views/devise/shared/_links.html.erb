@@ -1,7 +1,7 @@
 <div class="user-form-confirms">
   <%- if devise_mapping.omniauthable? %>
     <%- resource_class.omniauth_providers.each do |provider| %>
-      <%= link_to  omniauth_authorize_path(resource_name, provider), class:"link-style" do %>
+      <%= link_to  omniauth_authorize_path(resource_name, provider), method: :post, class:"link-style" do %>
         <div class="back-btn-area">
           <p>Googleアカウントで登録</p>
         </div>
