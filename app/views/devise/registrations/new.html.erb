@@ -10,7 +10,6 @@
       <div class="left-form-area">
         <div class="user-form-confirm">
           <%= render "devise/shared/links" %>
-          <%#= link_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, method: :post%>
         </div>
       </div>
 
@@ -27,22 +26,23 @@
           <%= f.label :email %><br />
           <%= f.email_field :email %>
         </div>
-                <%if @sns_id.present? %>
-                <%= hidden_field_tag :sns_auth, true %>
-                <% else %>
-            <div class="field">
-            <%= f.label :password %>
-            <% @minimum_password_length %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
-            <br />
-            <%= f.password_field :password, autocomplete: "new-password" %>
-            </div>
 
-              <div class="field">
-                <%= f.label :password_confirmation %><br />
-              <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-            </div>
-              <% end %>
+        <%if @sns_id.present? %>
+          <%= hidden_field_tag :sns_auth, true %>
+        <% else %>
+
+        <div class="field">
+          <%= f.label :password %>
+          <% @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+          <%= f.password_field :password, autocomplete: "new-password" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        </div>
+        <% end %>
 
         <div class="actions">
           <%= f.submit "サインイン", class: "login-push-btn" %>
